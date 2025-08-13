@@ -186,11 +186,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Support
 
 For issues and questions, please open an issue on the project repository.
-
->>>>>>> 2ab2090 (Initial commit: MCP PostgreSQL Server)
->>>>>>>
->>>>>>
->>>>>
->>>>
->>>
->>
