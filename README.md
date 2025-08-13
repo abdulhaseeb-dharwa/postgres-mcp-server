@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-# postgres-mcp-server
-MCP server for PostgreSQL: async pooling, schema describe, and safe query execution.
-=======
 # MCP PostgreSQL Server
 
 A Model Context Protocol (MCP) server that provides PostgreSQL database connectivity through a standardized interface. This server allows AI assistants and other MCP clients to interact with PostgreSQL databases safely and efficiently.
@@ -24,17 +20,20 @@ A Model Context Protocol (MCP) server that provides PostgreSQL database connecti
 ## Installation
 
 1. Clone this repository:
+
 ```bash
 git clone <repository-url>
 cd mcp-postgres
 ```
 
 2. Install dependencies using uv (recommended):
+
 ```bash
 uv sync
 ```
 
 Or using pip:
+
 ```bash
 pip install -r requirements.txt
 ```
@@ -42,6 +41,7 @@ pip install -r requirements.txt
 ## Configuration
 
 1. Create a `.env` file in the project root:
+
 ```env
 PG_DSN=postgresql://username:password@localhost:5432/database_name
 ```
@@ -63,12 +63,14 @@ The server will start and listen for MCP client connections via stdio transport.
 ### Available Tools
 
 #### 1. Health Check (`ping`)
+
 ```python
 # Returns connection status and response time
 ping()
 ```
 
 #### 2. Describe Table (`describe_table`)
+
 ```python
 # Get table structure information
 describe_table({
@@ -81,6 +83,7 @@ describe_table('{"schema": "public", "table": "users"}')
 ```
 
 #### 3. Execute Query (`query`)
+
 ```python
 # Read operation (default)
 query(
@@ -109,12 +112,14 @@ query(
 ### Supported SQL Operations
 
 **Read Operations:**
+
 - `SELECT` statements
 - `SHOW` commands
 - `EXPLAIN` queries
 - `WITH` clauses (CTEs)
 
 **Write Operations:**
+
 - `INSERT` statements
 - `UPDATE` statements
 - `DELETE` statements
@@ -159,6 +164,7 @@ async def your_tool_name(param1: str, param2: int) -> Dict[str, Any]:
 ## Error Handling
 
 The server includes robust error handling for:
+
 - Database connection issues
 - SQL syntax errors
 - Malformed JSON payloads
@@ -180,4 +186,11 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Support
 
 For issues and questions, please open an issue on the project repository.
+
 >>>>>>> 2ab2090 (Initial commit: MCP PostgreSQL Server)
+>>>>>>>
+>>>>>>
+>>>>>
+>>>>
+>>>
+>>
