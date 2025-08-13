@@ -52,10 +52,22 @@ PG_DSN=postgresql://username:password@localhost:5432/database_name
 
 ### Running the Server
 
-Start the MCP server:
+Start the MCP server (using uv):
 
 ```bash
-python server.py
+uv run server.py
+```
+
+Or via the `mcp` CLI:
+
+```bash
+uv run mcp run server.py
+```
+
+You can also test with the MCP Inspector:
+
+```bash
+npx @modelcontextprotocol/inspector uv run server.py
 ```
 
 The server will start and listen for MCP client connections via stdio transport.
